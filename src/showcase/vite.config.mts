@@ -3,7 +3,6 @@ import { Plugin, defineConfig } from "vite";
 import packageConfig from './package.json';
 import path from 'path';
 
-// Vue 2 because of dependent project
 import mitosis from '@src/plugin';
 
 const isDev = process.argv.join(' ').includes('--mode development');
@@ -14,12 +13,16 @@ const outputDir = 'dist';
 
 export default defineConfig({
 	plugins: [
-		// ts(),
-		mitosis(isDev, {
-			files: './src/**',
-			targets: ['vue3', 'vue2', 'solid', 'svelte', 'react']
+		mitosis({
+			targets: ['vue3', 'vue2', 'solid', 'svelte', 'react'],
+			parserOptions: {
+				jsx: {
+					typescript: true,
+					tsConfigFilePath: path.resolve(__dirname, './tsconfig.json')
+				}
+			}
 		})
-	] as unknown as Array<Plugin>,
+	],
 	build: {
 		outDir: outputDir,
 		minify: !isDev,

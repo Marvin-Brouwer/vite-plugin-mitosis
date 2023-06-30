@@ -23,16 +23,17 @@
   "devDependencies": {
     "@types/node": "^20.3.2",
     "fsevents": "^2.3.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite-plugin-dts": "^3.0.2"
   },
   "scripts": {
     "dev": "pnpm build --mode development --watch",
     "build": "vite build"
   },
-	"peerDependencies": {
+  "peerDependencies": {
     "@builder.io/react": "^3.0.5",
-		"ts-morph": "^19.0.0"
-	},
+    "ts-morph": "^19.0.0"
+  },
   "dependencies": {
     "@builder.io/mitosis": "^0.0.108",
     "@rollup/plugin-typescript": "^11.1.2",
