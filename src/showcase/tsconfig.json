@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"declaration": true,
+		"declarationDir": "./dist",
+		"declarationMap": true,
+		"jsx": "preserve",
+		"jsxImportSource": "@builder.io/mitosis",
+		"sourceMap": true,
+		"sourceRoot": "./src"
+	},
+	"include": [
+		"./src/**/*.tsx",
+		"./src/**/*.mts",
+		"./src/**/*.ts"
+	]
+}

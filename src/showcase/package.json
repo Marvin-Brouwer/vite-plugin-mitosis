@@ -1,0 +1,39 @@
+{
+  "name": "@src/showcase",
+  "version": "1.0.0",
+	"private": true,
+  "description": "",
+	"files": [
+    "dist",
+    "./dist/*.d.ts"
+  ],
+  "main": "./dist/test.umd.js",
+  "module": "./dist/test.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/test.es.js",
+      "require": "./dist/test.umd.js"
+    }
+  },
+  "typings": "./dist/*.d.ts",
+  "scripts": {
+    "dev": "pnpm build --mode development --watch",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "fsevents": "^2.3.2",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+		"@src/plugin": "workspace:*",
+    "@builder.io/react": "^3.0.5",
+		"ts-morph": "^19.0.0"
+
+  },
+  "dependencies": {
+    "@builder.io/mitosis": "^0.0.108"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@src/plugin",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "./dist/*.d.ts",
+    "./dist/*.js"
+  ],
+  "main": "./dist/plugin.mjs",
+  "module": "./dist/plugin.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/plugin.mjs",
+      "require": "./dist/plugin.mjs"
+    }
+  },
+  "types": "./dist/plugin.d.mts",
+  "typings": "./dist/plugin.d.mts",
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "fsevents": "^2.3.2",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "dev": "pnpm build --mode development --watch",
+    "build": "vite build"
+  },
+	"peerDependencies": {
+    "@builder.io/react": "^3.0.5",
+		"ts-morph": "^19.0.0"
+	},
+  "dependencies": {
+    "@builder.io/mitosis": "^0.0.108",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "vite": "^4.3.9"
+  }
+}
