@@ -29,6 +29,7 @@
 	"exclude": [
 		"./**/.pnpm/**",
 		"./**/node_modules/**",
-		"./**/vite.config.mts"
+		"./**/vite.config.mts",
+		"./**/dist/**"
 	]
 }
